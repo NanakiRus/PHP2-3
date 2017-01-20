@@ -7,5 +7,5 @@ if (isset($_GET['id'])) {
     $news->id = $_GET['id'];
     $news->delete();
 }
-header('Location: /obychenie/Php2-02/index.php');
+header('Location: /obychenie/Php2-03/index.php');
 die;

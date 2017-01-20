@@ -14,7 +14,6 @@ class Article
 
     public static $table = 'news';
 
-
     public $title;
     public $text;
     public $author_id;
@@ -28,6 +27,8 @@ class Article
         if ('author' === $name) {
             if (null != $this->author_id) {
                 return Author::findOneById($this->author_id);
+            } else {
+                return false;
             }
         }
     }

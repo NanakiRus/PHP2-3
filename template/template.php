@@ -15,16 +15,18 @@
         <?php foreach ($news as $text): ?>
             <ul>
                 <li>
-                    <a href="/obychenie/Php2-02/article.php?id=<?php echo $text->id; ?>"><?php echo $text->title; ?></a><br/><?php echo $text->text; ?>
+                    <a href="/obychenie/Php2-03/article.php?id=<?php echo $text->id; ?>"><?php echo $text->title; ?></a><br/><?php echo $text->text; ?>
                 </li>
             </ul>
             <?php if (!empty($author = $text->author)) {
                 echo $author->firstname . ' ' . $author->lastname;
+            } else {
+                echo 'Автор не указан';
             } ?>
         <?php endforeach; ?>
     </article>
     <h2>Добавить новую новость</h2>
-    <form method="post" action="/obychenie/Php2-02/saveArticle.php">
+    <form method="post" action="/obychenie/Php2-03/saveArticle.php">
         <p><input type="text" class="form-control" name="title" value=""></p>
         <p><textarea name="text" class="form-control" rows="3"></textarea></p>
         <input class="btn btn-default btn-lg" type="submit">

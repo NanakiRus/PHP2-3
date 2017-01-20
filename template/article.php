@@ -12,9 +12,11 @@
 <body>
 <div class="container">
     <article>
-            <form method="post" action="/obychenie/Php2-02/saveArticle.php">
-                <p><?php if (!empty($author = $news->author)) {
+            <form method="post" action="/obychenie/Php2-03/saveArticle.php">
+                <p><?php if (false !== ($author = $news->author)) {
                     echo $author->firstname . ' ' . $author->lastname;
+                    } else {
+                        echo 'Автор не указан';
                     } ?></p>
                 <input type="hidden" name="id" value="<?php echo $news->id; ?>">
                 <p><input type="text" class="form-control" name="title" value="<?php echo $news->title; ?>"></p>

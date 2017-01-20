@@ -23,5 +23,5 @@ if (isset($_POST['title']) && isset($_POST['text'])) {
     $article->save();
 }
 
-header('Location: /obychenie/Php2-02/index.php');
+header('Location: /obychenie/Php2-03/index.php');
 die;
