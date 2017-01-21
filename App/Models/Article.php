@@ -25,7 +25,7 @@ class Article
     public function __get($name)
     {
         if ('author' === $name) {
-            if (null != $this->author_id) {
+            if (!empty($this->author_id)) {
                 return Author::findOneById($this->author_id);
             } else {
                 return false;
