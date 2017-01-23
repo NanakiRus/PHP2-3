@@ -79,6 +79,9 @@ abstract class Model
 
     }
 
+    /**
+     * @return bool Если $id == null то insert() иначе update()
+     */
     public function save()
     {
         if (null === $this->id) {
