@@ -21,10 +21,6 @@ class Article
     public $text;
     public $author_id;
 
-    /**
-     * @param $name
-     * @return object|bool Author|false Возвращает модель автора или false.
-     */
     public function __get($name)
     {
         if ('author' === $name) {

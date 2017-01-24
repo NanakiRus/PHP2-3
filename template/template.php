@@ -18,6 +18,7 @@
                     <a href="/obychenie/Php2-03/article.php?id=<?php echo $text->id; ?>"><?php echo $text->title; ?></a><br/><?php echo $text->text; ?>
                 </li>
             </ul>
+            <!-- Присвоение необходимо, что-бы избежать повторных запросов к БД -->
             <?php if (!empty($author = $text->author)) {
                 echo $author->firstname . ' ' . $author->lastname;
             } else {
